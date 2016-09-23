@@ -4,3 +4,5 @@ Ada Lovelace, nacio, England
  Aleister Crowley,nacio, Warwickshire
  Shakira, nacio 922828, Colombia
  James, nacio 922828, Colombia
+ Pedro, nacio 922828, Colombia
+ Andrea, nacio 922828, Colombia
