@@ -48,25 +48,26 @@ def mygraph(request):
 
 		fromLabel= values[0]
 		toLabel= values[2]
-
 		from_id=findNodeId(fromLabel)
 		if from_id==-1:
 			nodes= graph["nodes"]
-			nodes.append({"id": node_id, "label": fromLabel})
-			from_id=node_id
-			node_id=node_id + 1
-		
-		to_id=findNodeId(toLabel)
-		if to_id==-1:
-			nodes= graph["nodes"]
-			nodes.append({"id": node_id, "label": toLabel})
-			to_id=node_id
-			node_id=node_id + 1
+			if fromLabel=="Hugo Ch":
+				nodes.append({"id": node_id, "label": fromLabel})
+				from_id=node_id
+				node_id=node_id + 1
+			
+			to_id=findNodeId(toLabel)
+			if to_id==-1:
+				nodes= graph["nodes"]
+				if fromLabel=="Hugo Ch":
+					nodes.append({"id": node_id, "label": toLabel})
+					to_id=node_id
+					node_id=node_id + 1
 
 
-		e= {"from": from_id, "to":to_id, "label": values[1]}
-		graph["edges"].append(e)
-		edge_id=edge_id+1
+				e= {"from": from_id, "to":to_id, "label": values[1]}
+				graph["edges"].append(e)
+				edge_id=edge_id+1
 
 
 	return JsonResponse(graph)
