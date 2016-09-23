@@ -14,6 +14,8 @@
 		<input type="submit">
 		<!--FIN DE LOS CAMBIOS-->
 		<br>
+
+    
     Name:<input id="n1" type="text" value="">
 		Country:<input id="c1" type="text" value="">
 		Day:<input id="d1" type="text" value="" size="5">
@@ -26,12 +28,10 @@
 		
 
 		<script type="text/javascript">
-
-
-
+    thename =document.write (n1.value)
+   
   function pintar(mynodes, myedges){
-    alert("alerta de click2" + elnombre )
-    // create an array with nodes
+       // create an array with nodes
     var nodes = new vis.DataSet(mynodes);
 
     // create an array with edges
@@ -49,8 +49,7 @@
   }
 
   function click2(){
-    elnombre=n1.value;
-     alert("alerta de click2" + n1.value )
+      alert("alerta de click2" + n1.value);
     $.ajax({url:"/graph",  
         success: function(result){
           console.log(result);

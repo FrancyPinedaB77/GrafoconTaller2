@@ -31,11 +31,15 @@ def findNodeId(nodeLabel):
 def index(request):
 	return render(request, "index.html", {})
 
+def grafo(request):
+	return render(request, "grafo.html", {})
+
+
 def mygraph(request):
 	file = open("data.txt")
 	print file
 
-	print 
+	
 
 	node_id=1
 	edge_id=1
@@ -49,9 +53,10 @@ def mygraph(request):
 		fromLabel= values[0]
 		toLabel= values[2]
 		from_id=findNodeId(fromLabel)
-		if from_id==-1:
-			nodes= graph["nodes"]
-			if fromLabel=="Hugo Ch":
+		if toLabel=="Colombia": #ESTE HACE EL FILTRO POR PAIS
+		#if fromLabel== "Shakira" or fromLabel=="Pique" : # ESTE HACE EL FILTRO POR NOMBRE
+			if from_id==-1:
+				nodes= graph["nodes"]
 				nodes.append({"id": node_id, "label": fromLabel})
 				from_id=node_id
 				node_id=node_id + 1
@@ -59,15 +64,14 @@ def mygraph(request):
 			to_id=findNodeId(toLabel)
 			if to_id==-1:
 				nodes= graph["nodes"]
-				if fromLabel=="Hugo Ch":
-					nodes.append({"id": node_id, "label": toLabel})
-					to_id=node_id
-					node_id=node_id + 1
+				nodes.append({"id": node_id, "label": toLabel})
+				to_id=node_id
+				node_id=node_id + 1
 
 
-				e= {"from": from_id, "to":to_id, "label": values[1]}
-				graph["edges"].append(e)
-				edge_id=edge_id+1
+			e= {"from": from_id, "to":to_id, "label": values[1]}
+			graph["edges"].append(e)
+			edge_id=edge_id+1
 
 
 	return JsonResponse(graph)
