@@ -1,9 +1,9 @@
 /*estilo de index inicial*/
    #migrafo {
-      width: 600px;
-      height: 400px;
+      width: 1200px;
+      height: 600px;
       border: 1px solid lightgray;
-    }
+        }
 
 
 
@@ -19,7 +19,7 @@
 }
 
 .vis-active {
-  box-shadow: 0 0 10px #86d5f8;
+  box-shadow: 0 0 10px  #FF0080 ; /*#86d5f8*/
 }
 
 /* override some bootstrap styles screwing up the timelines css */
@@ -51,7 +51,7 @@ div.vis-configuration.vis-config-option-container{
     display:block;
     width:495px;
     background-color: #ffffff;
-    border:2px solid #f7f8fa;
+    border:2px solid  #FFFF00 ; /*#f7f8fa*/
     border-radius:4px;
     margin-top:20px;
     left:10px;

@@ -53,7 +53,7 @@ def mygraph(request):
 		fromLabel= values[0]
 		toLabel= values[2]
 		from_id=findNodeId(fromLabel)
-		if toLabel=="Colombia": #ESTE HACE EL FILTRO POR PAIS
+		if toLabel==" Colombia" or toLabel=="France": #ESTE HACE EL FILTRO POR PAIS
 		#if fromLabel== "Shakira" or fromLabel=="Pique" : # ESTE HACE EL FILTRO POR NOMBRE
 			if from_id==-1:
 				nodes= graph["nodes"]
