@@ -5,9 +5,10 @@
 }
 
 #migrafo {
-      width: 600px;
-      height: 400px;
-      border: 1px solid lightgray;
+      width: 2000px;
+      height: 600px;
+      border: 1px ;
+      /*solid lightgray*/
 
 .mi-item{
 	color: #FE2E9A;
@@ -37,9 +38,12 @@
 
 
 #canvas{
-	position: absolute;
+  width: 2000px;
+      height: 600px;
+      border: 1px ;
+	/*position: absolute;
 	border: 3px;
-	border-color: #000000;
+	border-color: #000000;*/
 }
 
 #cuadro{
