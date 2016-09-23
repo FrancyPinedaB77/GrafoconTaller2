@@ -1,12 +1,13 @@
 from django.shortcuts import render
 
 from django.http import JsonResponse
+
+
 #haciendo la vista
 
 #def archive (request)
 
 
-#definiendo la vista de suma 
 def inicio(request):
 	
 	return render(request, 'inicio.html')
@@ -34,12 +35,17 @@ def mygraph(request):
 	file = open("data.txt")
 	print file
 
+	print 
+
 	node_id=1
 	edge_id=1
 	for line in file:
 		line= line.replace("\n", "")
 		values= line.split(",")
-		
+		 #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE 
+		 		
+		 #FIN DEL FILTRO PARA BUSCAR POR NOMBRE
+
 		fromLabel= values[0]
 		toLabel= values[2]
 
