@@ -1,0 +1,69 @@
+{% extends 'menu.html' %}
+
+		{% block title %}
+		<title>GRAFO</title>
+		{% endblock%}
+
+		{% block content %}
+		<br>
+		<br>
+		<h3>Ingresar:Nombre Pais Dia Mes Año </h3>
+		<!--algunos cambios-->
+		<form onsubmit="javascript:confirmInput()">
+		ejemplo: <input id="caja" type="text" size="5">
+		<input type="submit">
+		<!--FIN DE LOS CAMBIOS-->
+		<br>
+        Name:<input id="n1" type="text" value="">
+		Country:<input id="c1" type="text" value="">
+		Day:<input id="d1" type="text" value="" size="5">
+		Month:<input id="m1" type="text" value="" size="5">
+		Year:<input id="y1" type="text" value="" size="5">
+		<input id="b1" type="button" value="Grafo WIKI" onclick="javascript:ejemplo()">
+		
+
+		<script type="text/javascript">
+  function pintar(mynodes, myedges){
+    alert("hasta aca la alerta");
+// create an array with nodes
+    var nodes = new vis.DataSet(mynodes);
+
+    // create an array with edges
+    var edges = new vis.DataSet(myedges);
+
+    // create a network
+    var container = document.getElementById('migrafo');
+    var data = {
+      nodes: nodes,
+      edges: edges
+    };
+    var options = {};
+    var network = new vis.Network(container, data, options);
+
+  }
+
+  function click2(){
+    $.ajax({url:"/graph",  
+        success: function(result){
+          console.log(result);
+          nodes= result.nodes;
+          edges=result.edges;
+          pintar(nodes, edges);
+        }
+    });
+  }
+
+</script>
+<input type="button" value="Pintar" onclick="javascript:click2()">
+<div id="migrafo"></div>
+
+
+		
+
+		<!--CAMBIOS PARA EL GRAFO sudo scl enable python27 bash    jsonresponse ponerlo en una vista en una vista de jdjangpo -->
+		
+    	
+
+<!--FIN  DE LOS CAMBIOS  PARA EL GRAFO -->
+
+{% endblock%}

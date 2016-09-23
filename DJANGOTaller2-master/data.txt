@@ -1,0 +1,27 @@
+James,nacio en 1976,Colombia
+Shakira,nacio en 1960,Colombia
+Nayro,nacio en 1979,Colombia
+Hugo Ch,nacio en,Venezuela
+Hugo Ch,murio en,Venezuela
+Martin,nacio en,Colombia
+(u'Carolyn Beug', [u'1952|12|11', u'United States'])
+ (u'Charles Williams (British writer)', [u'1886|09|20', u'England\n'])
+ (u'Claude Monet', [u'1840|11|14', u'France\n'])
+(u'Charles Alston', [u'1907|11|28', u'North Carolina'])
+ (u'Caravaggio', [u'1571|09|29', u'Lombardy'])
+ (u'Carlo Collodi', [u'1826|11|24', u'Italy\n'])
+ (u'Clive Anderson', [u'1952|12|10', u'television presenter'])
+(u'Craig Venter', [u'1946|10|14', u'The State'])
+(u'Charles C. Krulak', [u'1942|03|04', u'U'])
+(u'Ada Lovelace', [u'1815|12|10', u'England\n '])
+ (u'Albert Schweitzer', [u'1875|01|14', u'France'])
+ (u'Andr\xe9 Gide', [u'1869|11|22', u'France\n'])
+ (u'Aleister Crowley', [u'1875|10|12', u'Warwickshire'])
+ (u'Alfred Russel Wallace', [u'1823|01|08', u'UK\n'])
+ (u'Aga Khan III', [u'1877|11|02', u'British India'])
+ (u'Arthur Aikin', [u'1773|05|19', u'England'])
+ (u'Alexander I of Serbia', [u'1876|08|14', u'Principality of'])
+ (u'Andrew Johnson', [u'1808|12|29', u'U'])
+(u'Aleksandr Solzhenitsyn', [u'1918|12|11', u'Russian Soviet'])
+ (u'Alexander Fleming', [u'1881|08|06', u'Scotland'])
+ (u'A. J. Ayer', [u'1910|10|29', u'England\n'])
