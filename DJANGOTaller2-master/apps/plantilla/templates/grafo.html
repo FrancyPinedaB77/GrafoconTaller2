@@ -6,10 +6,9 @@
 
 {% block content %}
     <br>
-    <form action="" method="post">
-        {% csrf_token %}
-        {{formulario}}
-        <input type="submit" value="Submit" />
+    <form action="" >
+        <input type="text" id="ok">
+        <input id="bpintar" type="button" value="submit" onclick="javascript:click2()">
     </form>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
@@ -19,6 +18,7 @@
             $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
         });
     </script>
+
     <input id="bpintar" type="button" value="Hacer el Grafo" onclick="javascript:click2()">
 
     <script type="text/javascript">
@@ -44,7 +44,7 @@
         function click2(){
             $.ajax({url:"/graph",
                 type: 'GET',
-                data: { country: "England"} ,
+                data: { country: document.getElementById("ok").value} ,
                 success: function(result){
                     console.log(result);
                     nodes= result.nodes;

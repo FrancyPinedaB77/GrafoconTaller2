@@ -21,15 +21,8 @@ def index(request):
 	return render(request, "index.html", {})
 
 def grafo(request):
-    if request.method=="POST":
-        form = NameForm(request.POST)
-        if form.is_valid():
-            algo= form.cleaned_data['name']
-            algo2= form.cleaned_data['start_date']
-            #mygraph(request, algo)
-    else:
-        form = NameForm();
-    return render(request, "grafo.html", {"formulario":form})
+
+    return render(request, "grafo.html")
 
 
 def mygraph(request):
