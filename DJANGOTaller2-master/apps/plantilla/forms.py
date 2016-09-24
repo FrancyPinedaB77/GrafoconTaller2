@@ -6,8 +6,8 @@ DateInput = partial(forms.DateInput, {'class': 'datepicker'})
 
 
 class NameForm(forms.Form):
-    name = forms.CharField(max_length=30, required=True, widget=forms.TextInput(attrs={'placeholder': 'Name','size':12}))
-    country = forms.CharField( max_length=30, required=True, widget=forms.TextInput(attrs={'placeholder': 'Country','size':12}))
+    name = forms.CharField(max_length=30, widget=forms.TextInput(attrs={'placeholder': 'Name','size':12}))
+    country = forms.CharField( max_length=30, widget=forms.TextInput(attrs={'placeholder': 'Country','size':12}))
     start_date = forms.DateField(widget=DateInput())
     end_date = forms.DateField(widget=DateInput())
 

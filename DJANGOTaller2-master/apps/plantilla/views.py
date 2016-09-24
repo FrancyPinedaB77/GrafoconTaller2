@@ -7,9 +7,6 @@ from .forms import NameForm
 def inicio(request):	
 	return render(request, 'inicio.html')
 
-#def grafo(request):
-#	return render(request, 'grafo.html')
-# Create your views here.
 graph={"nodes":[], "edges":[]}
 
 def findNodeId(nodeLabel):
@@ -23,20 +20,24 @@ def index(request):
 	return render(request, "index.html", {})
 
 def grafo(request):
-    a = "hola"
-    form = NameForm()
+    if request.method=="POST":
+        form = NameForm(request.POST)
+        if form.is_valid():
+            algo= form.cleaned_data['name']
+            algo2= form.cleaned_data['start_date']
+            #mygraph(request, algo)
+    else:
+        form = NameForm();
     return render(request, "grafo.html", {"formulario":form})
 
 
 def mygraph(request):
-	file = open("data.txt")
-	print file
-
-	
-
-	node_id=1
-	edge_id=1
-	for line in file:
+    print "entro a funcion pintar"
+    file = open("data.txt")
+    print file
+    node_id=1
+    edge_id=1
+    for line in file:
 		line= line.replace("\n", "")
 		values= line.split(",")
 		 #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE 
@@ -46,8 +47,8 @@ def mygraph(request):
 		fromLabel= values[0]
 		toLabel= values[2]
 		from_id=findNodeId(fromLabel)
-		if toLabel==" Colombia" or toLabel=="France": #ESTE HACE EL FILTRO POR PAIS
-		#if fromLabel== "Shakira" or fromLabel=="Pique" : # ESTE HACE EL FILTRO POR NOMBRE
+		if toLabel==" Colombia": #ESTE HACE EL FILTRO POR PAIS
+		#if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
 			if from_id==-1:
 				nodes= graph["nodes"]
 				nodes.append({"id": node_id, "label": fromLabel})
@@ -65,6 +66,4 @@ def mygraph(request):
 			e= {"from": from_id, "to":to_id, "label": values[1]}
 			graph["edges"].append(e)
 			edge_id=edge_id+1
-
-
-	return JsonResponse(graph)
+			return JsonResponse(graph)
