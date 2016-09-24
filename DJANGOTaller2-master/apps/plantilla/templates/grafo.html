@@ -6,30 +6,23 @@
 
 		{% block content %}
 		<br>
-		<br>
-		<h3>Ingresar:Nombre Pais Dia Mes Año </h3>
-		<!--algunos cambios-->
-		<form onsubmit="javascript:confirmInput()">
-		<!--FIN DE LOS CAMBIOS-->
-		<br>
-
-
-    Name:<input id="n1" type="text" value="">
-		Country:<input id="c1" type="text" value="">
-    <br>
-		Day1:<input id="d1" type="text" value="" size="5">
-		Month1:<input id="m1" type="text" value="" size="5">
-		Year1:<input id="y1" type="text" value="" size="5">
-    <br>
-    Day2:<input id="d2" type="text" value="" size="5">
-    Month2:<input id="m2" type="text" value="" size="5">
-    Year2:<input id="y2" type="text" value="" size="5">
-		<input id="bpintar" type="button" value="Pintar" onclick="javascript:click2()">
-    <br>
-    <br>
+      <form action="" method="post">
+        {% csrf_token %}
+        {{formulario}}
+        <input type="submit" value="Submit" />
+      </form>
+            <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+            <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+            <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+            <script>
+                $(document).ready(function() {
+                    $('.datepicker').datepicker({ dateFormat: 'yy|mm|dd' });
+                });
+            </script>
+    <input id="bpintar" type="button" value="Hacer el Grafo" onclick="javascript:click2()">
+    
     <script type="text/javascript">
-    thename =document.write (n1.value)
-   
+
   function pintar(mynodes, myedges){
        // create an array with nodes
     var nodes = new vis.DataSet(mynodes);
@@ -49,8 +42,7 @@
   }
 
   function click2(){
-      alert("alerta de click2" + n1.value);
-    $.ajax({url:"/graph",  
+        $.ajax({url:"/graph",
         success: function(result){
           console.log(result);
           nodes= result.nodes;
@@ -61,6 +53,7 @@
   }
 
 </script>
+
 
 <div id="migrafo"></div>
 

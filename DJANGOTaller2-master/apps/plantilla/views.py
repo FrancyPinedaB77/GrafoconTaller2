@@ -1,24 +1,15 @@
 from django.shortcuts import render
-
+from django.http import HttpResponseRedirect
 from django.http import JsonResponse
-
-
-#haciendo la vista
+from .forms import NameForm
 
 #def archive (request)
-
-
-def inicio(request):
-	
+def inicio(request):	
 	return render(request, 'inicio.html')
 
-
-def grafo(request):
-	return render(request, 'grafo.html')
-
+#def grafo(request):
+#	return render(request, 'grafo.html')
 # Create your views here.
-
-
 graph={"nodes":[], "edges":[]}
 
 def findNodeId(nodeLabel):
@@ -32,7 +23,9 @@ def index(request):
 	return render(request, "index.html", {})
 
 def grafo(request):
-	return render(request, "grafo.html", {})
+    a = "hola"
+    form = NameForm()
+    return render(request, "grafo.html", {"formulario":form})
 
 
 def mygraph(request):

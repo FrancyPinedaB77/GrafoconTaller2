@@ -7,5 +7,6 @@ urlpatterns = [
  	url(r'^$', views.inicio),
  	url(r'^graph$', views.mygraph, name='mygraph'),
  	url(r'^grafo$', views.grafo, name='mygraph'),
-]
+	url(r'^grafo$/ejemplo','plantilla.views.grafo',name="grafo"),
+	]
 
