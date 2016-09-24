@@ -1,8 +1,8 @@
-Ada Lovelace, nacio, England 
+Ada-Lovelace,nacio,England
  Albert Schweitzer, nacio, France
  Andrxe9 Gide, nacio, France
  Aleister Crowley,nacio, Warwickshire
- Shakira, nacio 922828, Colombia
- James, nacio 922828, Colombia
- Pedro, nacio 922828, Colombia
+ Shakira, nacio 922828,Colombia
+ James, nacio 922828,Colombia
+ Pedro, nacio 922828,Colombia
  Andrea, nacio 922828, Colombia

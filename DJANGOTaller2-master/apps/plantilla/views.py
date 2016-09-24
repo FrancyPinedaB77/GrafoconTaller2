@@ -7,9 +7,10 @@ from .forms import NameForm
 def inicio(request):	
 	return render(request, 'inicio.html')
 
-graph={"nodes":[], "edges":[]}
+
 
 def findNodeId(nodeLabel):
+        graph = {"nodes": [], "edges": []}
 	nodes = graph["nodes"]
 	for n in nodes:
 		if n["label"]==nodeLabel:
@@ -34,6 +35,10 @@ def grafo(request):
 def mygraph(request):
     print "entro a funcion pintar"
     file = open("data.txt")
+    graph = {"nodes": [], "edges": []}
+    a=""
+    a=request.GET['country']
+    print a
     print file
     node_id=1
     edge_id=1
@@ -47,7 +52,7 @@ def mygraph(request):
 		fromLabel= values[0]
 		toLabel= values[2]
 		from_id=findNodeId(fromLabel)
-		if toLabel==" Colombia": #ESTE HACE EL FILTRO POR PAIS
+		if toLabel==a: #ESTE HACE EL FILTRO POR PAIS
 		#if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
 			if from_id==-1:
 				nodes= graph["nodes"]

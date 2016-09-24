@@ -1,65 +1,67 @@
 {% extends 'menu.html' %}
 
-		{% block title %}
-		<title>GRAFO</title>
-		{% endblock%}
+{% block title %}
+    <title>GRAFO</title>
+{% endblock%}
 
-		{% block content %}
-		<br>
-      <form action="" method="post">
+{% block content %}
+    <br>
+    <form action="" method="post">
         {% csrf_token %}
         {{formulario}}
         <input type="submit" value="Submit" />
-      </form>
-            <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-            <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-            <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-            <script>
-                $(document).ready(function() {
-                    $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
-                });
-            </script>
+    </form>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
+        });
+    </script>
     <input id="bpintar" type="button" value="Hacer el Grafo" onclick="javascript:click2()">
-    
+
     <script type="text/javascript">
 
-  function pintar(mynodes, myedges){
-       // create an array with nodes
-    var nodes = new vis.DataSet(mynodes);
+        function pintar(mynodes, myedges){
+            // create an array with nodes
+            var nodes = new vis.DataSet(mynodes);
 
-    // create an array with edges
-    var edges = new vis.DataSet(myedges);
+            // create an array with edges
+            var edges = new vis.DataSet(myedges);
 
-    // create a network
-    var container = document.getElementById('migrafo');
-    var data = {
-      nodes: nodes,
-      edges: edges
-    };
-    var options = {};
-    var network = new vis.Network(container, data, options);
+            // create a network
+            var container = document.getElementById('migrafo');
+            var data = {
+                nodes: nodes,
+                edges: edges
+            };
+            var options = {};
+            var network = new vis.Network(container, data, options);
 
-  }
-
-  function click2(){
-        $.ajax({url:"/graph",
-        success: function(result){
-          console.log(result);
-          nodes= result.nodes;
-          edges=result.edges;
-          pintar(nodes, edges);
         }
-    });
-  }
 
-</script>
+        function click2(){
+            $.ajax({url:"/graph",
+                type: 'GET',
+                data: { country: "England"} ,
+                success: function(result){
+                    console.log(result);
+                    nodes= result.nodes;
+                    edges=result.edges;
+                    pintar(nodes, edges);
+                }
+            });
+        }
+
+    </script>
 
 
-<div id="migrafo"></div>
+    <div id="migrafo"></div>
 
-		<!--CAMBIOS PARA EL GRAFO sudo scl enable python27 bash    jsonresponse ponerlo en una vista en una vista de jdjangpo -->
+    <!--CAMBIOS PARA EL GRAFO sudo scl enable python27 bash    jsonresponse ponerlo en una vista en una vista de jdjangpo -->
 
 
-<!--FIN  DE LOS CAMBIOS  PARA EL GRAFO -->
+    <!--FIN  DE LOS CAMBIOS  PARA EL GRAFO -->
 
 {% endblock%}
