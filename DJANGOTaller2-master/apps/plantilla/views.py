@@ -38,8 +38,7 @@ def mygraph(request):
     for line in file:
 		line= line.replace("\n", "")
 		values= line.split(",")
-		 #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE 
-		 		
+		 #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE 		 		
 		 #FIN DEL FILTRO PARA BUSCAR POR NOMBRE
 
 		fromLabel= values[0]
