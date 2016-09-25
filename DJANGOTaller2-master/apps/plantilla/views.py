@@ -2,16 +2,19 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 from .forms import NameForm
+import os
+#HACIENDO UN SUBPROCESO
 
+#TERMINANDO EL SUBPROCESO
+
+graph = {"nodes": [], "edges": []}
+os.system ("scp cluster_bigdata:lasalida/salidam* /home/estudiante/GrafoconTaller2/DJANGOTaller2-master")
 #def archive (request)
 def inicio(request):	
 	return render(request, 'inicio.html')
 
-
-
-
 def findNodeId(nodeLabel):
-	graph = {"nodes": [], "edges": []}
+	#graph = {"nodes": [], "edges": []}
 	nodes = graph["nodes"]
 	for n in nodes:
 		if n["label"]==nodeLabel:
@@ -25,9 +28,10 @@ def grafo(request):
 
     return render(request, "grafo.html")
 
-
 def mygraph(request):
     file = open("data.txt")
+
+
     graph = {"nodes": [], "edges": []}
     print graph
     a=request.GET['country']
