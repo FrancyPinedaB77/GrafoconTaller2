@@ -19,27 +19,3 @@ tests/report/
 *.foo
 *.pyc
 git rm -f *.pyc
-*.egg-info
-*.pot
-*.py[co]
-.tox/
-.installed.cfg
-bin
-develop-eggs
-dist
-downloads
-eggs
-parts
-src/*.egg-info
-lib
-lib64
-__pycache__
-MANIFEST
-dist/
-docs/_build/
-docs/locale/
-node_modules/
-tests/coverage_html/
-tests/.coverage
-build/
-tests/report/
