@@ -16,5 +16,6 @@ tests/coverage_html/
 tests/.coverage
 build/
 tests/report/
-
-git rm --cached
+*.foo
+*.pyc
+git rm -f *.pyc

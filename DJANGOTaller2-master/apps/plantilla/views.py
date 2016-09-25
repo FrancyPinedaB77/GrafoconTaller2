@@ -9,8 +9,9 @@ def inicio(request):
 
 
 
+
 def findNodeId(nodeLabel):
-        graph = {"nodes": [], "edges": []}
+	graph = {"nodes": [], "edges": []}
 	nodes = graph["nodes"]
 	for n in nodes:
 		if n["label"]==nodeLabel:
@@ -26,13 +27,12 @@ def grafo(request):
 
 
 def mygraph(request):
-    print "entro a funcion pintar"
     file = open("data.txt")
     graph = {"nodes": [], "edges": []}
-    a=""
+
     a=request.GET['country']
-    print a
-    print file
+    b=request.GET['nm']
+
     node_id=1
     edge_id=1
     for line in file:
@@ -45,7 +45,7 @@ def mygraph(request):
 		fromLabel= values[0]
 		toLabel= values[2]
 		from_id=findNodeId(fromLabel)
-		if toLabel==a: #ESTE HACE EL FILTRO POR PAIS
+		if (fromLabel==b or toLabel==a): #ESTE HACE EL FILTRO POR PAIS
 		#if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
 			if from_id==-1:
 				nodes= graph["nodes"]
@@ -65,3 +65,4 @@ def mygraph(request):
 			graph["edges"].append(e)
 			edge_id=edge_id+1
 			return JsonResponse(graph)
+		

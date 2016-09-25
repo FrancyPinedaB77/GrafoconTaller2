@@ -7,19 +7,17 @@
 {% block content %}
     <br>
     <form action="" >
-        <input type="text" id="ok">
+        <label for="nombre">Country</label>
+        <input type="text" id="ok" >
+        <label for="nombre">Name</label>
+        <input type="text" id="n1" >
         <input id="bpintar" type="button" value="submit" onclick="javascript:click2()">
     </form>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.datepicker').datepicker({ dateFormat: 'yy-mm-dd' });
-        });
-    </script>
 
-    <input id="bpintar" type="button" value="Hacer el Grafo" onclick="javascript:click2()">
+    <!--<input id="bpintar" type="button" value="Hacer el Grafo" onclick="javascript:click2()"> -->
 
     <script type="text/javascript">
 
@@ -44,7 +42,7 @@
         function click2(){
             $.ajax({url:"/graph",
                 type: 'GET',
-                data: { country: document.getElementById("ok").value} ,
+                data: { country: document.getElementById("ok").value,nm: document.getElementById("n1").value} ,
                 success: function(result){
                     console.log(result);
                     nodes= result.nodes;
@@ -55,8 +53,6 @@
         }
 
     </script>
-
-
     <div id="migrafo"></div>
 
     <!--CAMBIOS PARA EL GRAFO sudo scl enable python27 bash    jsonresponse ponerlo en una vista en una vista de jdjangpo -->
