@@ -29,7 +29,7 @@ def grafo(request):
 def mygraph(request):
     file = open("data.txt")
     graph = {"nodes": [], "edges": []}
-
+    print graph
     a=request.GET['country']
     b=request.GET['nm']
 
