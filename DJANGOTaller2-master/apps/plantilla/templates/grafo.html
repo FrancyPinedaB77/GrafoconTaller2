@@ -42,7 +42,7 @@
         function click2(){
             $.ajax({url:"/graph",
                 type: 'GET',
-                data: { country: document.getElementById("ok").value,nm: document.getElementById("n1").value} ,
+                data: { country: document.getElementById("ok").value,name: document.getElementById("n1").value} ,
                 success: function(result){
                     console.log(result);
                     nodes= result.nodes;

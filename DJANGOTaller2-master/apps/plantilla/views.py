@@ -30,11 +30,8 @@ def grafo(request):
 
 def mygraph(request):
     file = open("data.txt")
-    print file
-    graph = {"nodes": [], "edges": []}
-    print graph
     a=request.GET['country']
-    b=request.GET['nm']
+    b=request.GET['name']
     node_id=1
     edge_id=1
     for line in file:
