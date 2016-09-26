@@ -3,11 +3,12 @@ from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 import os
 #HACIENDO UN SUBPROCESO
-
+archivo_cluster=os.system ("scp cluster_bigdata:lasalida/cluster* /home/estudiante/GrafoconTaller2/DJANGOTaller2-master")
+print archivo_cluster
 #TERMINANDO EL SUBPROCESO
 
 
-os.system ("scp cluster_bigdata:lasalida/salidam* /home/estudiante/GrafoconTaller2/DJANGOTaller2-master")
+
 #def archive (request)
 def inicio(request):
     return render(request, 'inicio.html')
