@@ -5,17 +5,62 @@
 {% endblock%}
 
 {% block content %}
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.1/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker({ dateFormat: 'yy/mm/dd' });
+        });
+        $(function () {
+            $("#datepicker1").datepicker({ dateFormat: 'yy/mm/dd' });
+        });
+    </script>
     <br>
     <form action="" >
-        <label for="nombre">Country</label>
-        <input type="text" id="ok" >
-        <label for="nombre">Name</label>
-        <input type="text" id="n1" >
-        <input id="bpintar" type="button" value="submit" onclick="javascript:click2()">
+
+        <div class="container">
+            <!-- Example row of columns -->
+            <div class="row">
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label for="usr">Name:</label>
+                        <input type="text" class="form-control" id="n1">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="usr">Country:</label>
+                        <input type="text" class="form-control" id="ok">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="usr">Date Start:</label>
+                        <input type="text" class="form-control" id="datepicker">
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="usr">Date Finish :</label>
+                        <input type="text" class="form-control" id="datepicker1">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8">
+                    <input id="bpintar" class="btn btn-success" type="button" value="Submit" onclick="javascript:click2()">
+                </div>
+            </div>
+
     </form>
-    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+
 
     <!--<input id="bpintar" type="button" value="Hacer el Grafo" onclick="javascript:click2()"> -->
 
