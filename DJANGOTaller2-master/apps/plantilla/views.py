@@ -30,9 +30,11 @@ def grafo(request):
 
 def mygraph(request):
     graph = {"nodes": [], "edges": []}
-    file = open("cluster.txt")
+    file = open("data.txt")
     a=request.GET['country']
     b=request.GET['name']
+    f_inicio=request.GET['fecha_inicio']
+    f_fin=request.GET['fecha_fin']
     node_id=1
     edge_id=1
     for line in file:
@@ -43,8 +45,9 @@ def mygraph(request):
          #FIN DEL FILTRO PARA BUSCAR POR NOMBRE
         fromLabel= values[0]
         toLabel= values[2]
+        fecha=values[1]
         from_id=findNodeId(fromLabel, graph)
-        if (fromLabel==b or toLabel==a): #ESTE HACE EL FILTRO POR PAIS
+        if (fromLabel==b or toLabel==a and (f_inicio <= fecha <= f_fin)): #ESTE HACE EL FILTRO POR PAIS
         #if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
             if from_id==-1:
                 nodes= graph["nodes"]

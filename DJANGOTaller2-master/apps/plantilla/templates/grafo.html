@@ -87,7 +87,7 @@
         function click2(){
             $.ajax({url:"/graph",
                 type: 'GET',
-                data: { country: document.getElementById("ok").value,name: document.getElementById("n1").value} ,
+                data: { country: document.getElementById("ok").value,name: document.getElementById("n1").value,fecha_inicio:document.getElementById("datepicker").value,fecha_fin:document.getElementById("datepicker1").value} ,
                 success: function(result){
                     console.log(result);
                     nodes= result.nodes;
@@ -96,7 +96,6 @@
                 }
             });
         }
-
     </script>
     <div id="migrafo"></div>
 
