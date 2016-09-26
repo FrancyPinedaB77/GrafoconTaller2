@@ -30,7 +30,7 @@ def grafo(request):
 
 def mygraph(request):
     graph = {"nodes": [], "edges": []}
-    file = open("data.txt")
+    file = open("cluster.txt")
     a=request.GET['country']
     b=request.GET['name']
     node_id=1
