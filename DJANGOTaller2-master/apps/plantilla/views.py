@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from django.http import JsonResponse
 import os
 #HACIENDO UN SUBPROCESO
-archivo_cluster=os.system ("scp cluster_bigdata:lasalida/cluster* /home/estudiante/GrafoconTaller2/DJANGOTaller2-master")
+archivo_cluster=os.system ("scp cluster_bigdata:lasalida/nombre_fecha_lugar* /home/estudiante/GrafoconTaller2/DJANGOTaller2-master")
 print archivo_cluster
 #TERMINANDO EL SUBPROCESO
 
@@ -30,7 +30,7 @@ def grafo(request):
 
 def mygraph(request):
     graph = {"nodes": [], "edges": []}
-    file = open("data.txt")
+    file = open("nombre_fecha_lugar.txt")
     a=request.GET['country']
     b=request.GET['name']
     f_inicio=request.GET['fecha_inicio']
