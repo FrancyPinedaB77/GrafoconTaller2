@@ -1,7 +1,12 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect,HttpResponse
 from django.http import JsonResponse
 import os
+import sys
+import json 
+reload(sys)  # Reload does the trick!
+sys.setdefaultencoding('UTF8')
+
 #HACIENDO UN SUBPROCESO
 archivo_cluster=os.system ("scp cluster_bigdata:lasalida/nombre_fecha_lugar* /home/estudiante/GrafoconTaller2/DJANGOTaller2-master")
 print archivo_cluster
@@ -29,8 +34,11 @@ def grafo(request):
     return render(request, "grafo.html")
 
 def mygraph(request):
+
     graph = {"nodes": [], "edges": []}
-    file = open("nombre_fecha_lugar.txt")
+
+    file = open("data.txt")
+
     a=request.GET['country']
     b=request.GET['name']
     f_inicio=request.GET['fecha_inicio']
@@ -38,32 +46,43 @@ def mygraph(request):
     node_id=1
     edge_id=1
     for line in file:
-        line= line.replace("\n", "")
-        line2=line.replace("|","/")
-        values= line2.split(",")
-         #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE
-         #FIN DEL FILTRO PARA BUSCAR POR NOMBRE
-        fromLabel= values[0]
-        toLabel= values[2]
-        fecha=values[1]
-        from_id=findNodeId(fromLabel, graph)
-        if (fromLabel==b or toLabel==a and (f_inicio <= fecha <= f_fin)): #ESTE HACE EL FILTRO POR PAIS
-        #if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
-            if from_id==-1:
-                nodes= graph["nodes"]
-                nodes.append({"id": node_id, "label": fromLabel})
-                from_id=node_id
-                node_id=node_id + 1
-
-            to_id=findNodeId(toLabel, graph)
-            if to_id==-1:
-                nodes= graph["nodes"]
-                nodes.append({"id": node_id, "label": toLabel})
-                to_id=node_id
-                node_id=node_id + 1
+        if  line.strip():
+            line= line.replace("\n", "")
+            line1=line.replace(" ","")
+            line2=line1.replace("|","/")
+            values= line2.split(",")
+             #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE
+             #FIN DEL FILTRO PARA BUSCAR POR NOMBRE
+            if not (values[2] or values[0]) :
+                toLabel="a";
+                FromLabel="a"; 
+                
+            else:
+                toLabel= values[2]
+                fromLabel= values[0]
+            fecha=values[1]
 
 
-            e= {"from": from_id, "to":to_id, "label": values[1]}
-            graph["edges"].append(e)
-            edge_id=edge_id+1
-    return JsonResponse(graph)
+
+            from_id=findNodeId(fromLabel, graph)
+            if (fromLabel==b or toLabel==a and (f_inicio <= fecha <= f_fin)): #ESTE HACE EL FILTRO POR PAIS
+            #if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
+                if from_id==-1:
+                    nodes= graph["nodes"]
+                    nodes.append({"id": node_id, "label": fromLabel})
+                    from_id=node_id
+                    node_id=node_id + 1
+
+                to_id=findNodeId(toLabel, graph)
+                if to_id==-1:
+                    nodes= graph["nodes"]
+                    nodes.append({"id": node_id, "label": toLabel})
+                    to_id=node_id
+                    node_id=node_id + 1
+
+
+                e= {"from": from_id, "to":to_id, "label": values[1]}
+                graph["edges"].append(e)
+                edge_id=edge_id+1
+        #return JsonResponse(graph)
+    return HttpResponse(json.dumps(graph,ensure_ascii=False).encode("utf8"),content_type="application/json")
