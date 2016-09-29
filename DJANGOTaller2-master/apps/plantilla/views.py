@@ -58,7 +58,7 @@ def mygraph(request):
                 toLabel= values[2]
                 fromLabel= values[0]
                 fecha=values[1]
-                #print "aqui entra a verificar los campos value 01y2"
+                print "aqui entra a verificar los campos value 01y2"
             except :
                  toLabel= "a"
                  fromLabel= "a"
