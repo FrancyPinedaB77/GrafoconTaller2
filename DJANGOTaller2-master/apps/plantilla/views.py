@@ -39,7 +39,7 @@ def mygraph(request):
 
     file = open("nombrelugar.txt")
     #file = open("nombre_fecha_lugar_ultimo.txt")
-    print "entra y elee el archivo"
+    #print "entra y elee el archivo"
     a=request.GET['country']
     b=request.GET['name']
     f_inicio=request.GET['fecha_inicio']
@@ -58,13 +58,14 @@ def mygraph(request):
                 toLabel= values[2]
                 fromLabel= values[0]
                 fecha=values[1]
+                #print "aqui entra a verificar los campos value 01y2"
             except :
                  toLabel= "a"
                  fromLabel= "a"
                  fecha="a"              
 
             from_id=findNodeId(fromLabel, graph)
-            if (fromLabel==b or toLabel==a and (f_inicio <= fecha <= f_fin)): #ESTE HACE EL FILTRO POR PAIS
+            if (fromLabel==b or (toLabel==a and (f_inicio <= fecha <= f_fin))): #ESTE HACE EL FILTRO POR PAIS
             #if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
                 if from_id==-1:
                     nodes= graph["nodes"]
@@ -83,6 +84,6 @@ def mygraph(request):
                 e= {"from": from_id, "to":to_id, "label": values[1]}
                 graph["edges"].append(e)
                 edge_id=edge_id+1
-                print "entra al if final"
+    #print "aqui debe generar el json linea antes de json"
     #return JsonResponse(graph)
     return HttpResponse(json.dumps(graph,ensure_ascii=False).encode("utf8"),content_type="application/json")
