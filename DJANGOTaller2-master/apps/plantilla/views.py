@@ -37,9 +37,9 @@ def mygraph(request):
 
     graph = {"nodes": [], "edges": []}
 
-    #file = open("data.txt")
-    file = open("nombre_fecha_lugar_ultimo.txt")
-    
+    file = open("data.txt")
+    #file = open("nombre_fecha_lugar_ultimo.txt")
+    print "entra y elee el archivo"
     a=request.GET['country']
     b=request.GET['name']
     f_inicio=request.GET['fecha_inicio']
@@ -83,5 +83,6 @@ def mygraph(request):
                 e= {"from": from_id, "to":to_id, "label": values[1]}
                 graph["edges"].append(e)
                 edge_id=edge_id+1
+                print "entra al if final"
     #return JsonResponse(graph)
     return HttpResponse(json.dumps(graph,ensure_ascii=False).encode("utf8"),content_type="application/json")

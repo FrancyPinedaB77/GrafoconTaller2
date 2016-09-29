@@ -1,169 +1,101 @@
-Ada-Lovelace,nacio,England
-Albert Schweitzer,nacio,France
-Andrxe9 Gide,nacio,France
-Aleister Crowley,nacio,Warwickshire
-Shakira,nacio 922828,Colombia
-James,nacio 922828,Colombia
-Pedro,nacio 922828,Colombia
-Andrea,nacio 922828, Colombia
-Shakira,esposo,Pique
-Shakira,hijo,nino
-Anders Celsius,1701|11|27,Sweden
-Alain Connes,1947|04|01,France
-Andre Agassi,1970|04|29,Nevada
-Arthur Schopenhauer,1788|02|22,ul
-Alfred Hitchcock,1899|08|13,England
-Alfred Nobel,1833|10|21,Sweden
-Ada Lovelace,1815|12|10,England
-Albert Schweitzer,1875|01|14,France
-Vladimir Benedsky,1970|06|19,Russian SFSR
-Dick Botiller,1896|10|26,United States
-Devon J. Moore,1982|11|27,2013
-Francisco Soares,1991|01|17,Brazil
-Deb Sofield,1963|10|08,Executive Speech
-Wilfried Pollagba,1991|10|10,Central African
-Tin Patrimonio,1991|12|29,Rizal
-Sergio García (judoka),1987|08|14,Mexico
-Bede Morris,1927|06|10,New South
-Purba Rgyal,1985|07|08,singer
-Yann Rolim,1995|03|15,Brazil
-Rob Gibsun,1990|02|05,rapper
-Kirill Gashichev,1980|03|20,Russian SFSR
-Cliff Bowes,1894|11|14,United States
-Junior Madozein,1987|10|10,Central African
-Tomas Cardona,1995|10|10,Argentina
-Draft:Harry Smith (Radio Presenter),2000|11|01,United Kingdom
-Sione Lea,1987|01|12,Tonga
-Daniel Hawkins,1991|04|20,New Zealand
-Judy Hoback Miller,1937|05|10,U
-Marten Scheffer,1958|09|13,complex systems
-Manuel Aparici Navarro,1902|12|11,Spain
-Will Snowdon,1983|01|07,England
-Juan Thomas,1928|12|18,Spain
-Marissa Oakley,1999|04|15,quot
-Bhim Bahadur Dewan (Soldier),1961|06|05,Ward No
-Charles C. Krulak,1942|03|04,U
-Alain Connes,1947|04|01,France
-Andre Agassi,1970|04|29,Nevada
-Arthur Schopenhauer,1788|02|22,ul
-Alfred Hitchcock,1899|08|13,England
-Alfred Nobel,1833|10|21,Sweden
-Ada Lovelace,1815|12|10,England
-Albert Schweitzer,1875|01|14,France
-Andre Gide,1869|11|22,France
-Aleister Crowley,1875|10|12,Warwickshire
-Alfred Russel Wallace,1823|01|08,UK
-Aga Khan III,1877|11|02,British India
-Arthur Aikin,1773|05|19,England
-Alexander I of Serbia,1876|08|14,Principality of
-Andrew Johnson,1808|12|29,U
-Aleksandr Solzhenitsyn,1918|12|11,Russian Soviet
-Alexander Fleming,1881|08|06,Scotland
-A. J. Ayer,1910|10|29,England
-Andre Weil,1906|05|06,France
-Alexander Grothendieck,1928|03|28,Weimar Republic
-Auguste Rodin,1840|11|12,France
-Ani DiFranco,1970|09|23,poet
-Arthur Eddington,1882|12|28,England
-Arthur Miller,1915|10|17,United States
-Alberto Giacometti,1901|10|10,Switzerland
-Anders Celsius,1701|11|27,Sweden
-Abraham Joshua Heschel,1907|01|11,Congress Poland
-Alex Lifeson,1953|08|27,Producer
-Mao Zedong,1893|12|26,Qing Dynasty
-Mackenzie Bowell,1823|12|27,England
-Margaret Mead,1901|12|16,USA
-Maciej Płażyński,1958|02|10,People
-Marsilio Ficino,1433|10|19,Republic of
-Morihei Ueshiba,1883|12|14,Japan
-Marcello Malpighi,1628|03|10,Papal States
-Maria Feodorovna (Dagmar of Denmark),1847|11|26,Denmark
-Mandy Patinkin,1952|11|30,comedian
-Michael Atiyah,1929|04|22,Cambridge
-Michael Nesmith,1942|12|30,owner of
-Nancy Reagan,1921|07|06,U
-Niklas Luhmann,1927|12|08,Weimar Germany
-Nicolas Louis de Lacaille,1713|12|29,France
-Naomi Wolf,1962|11|12,activist
-Ninon de l'Enclos,1620|11|10,France
-Naguib Mahfouz,1911|12|11,Khedivate of
-Norman Hackerman,1912|03|02,USA
-Oliver North,1943|10|07,U
-Oscar Peterson,1925|08|15,Canada
-Ozzie Smith,1954|12|26,Alabama
-Poul Anderson,1926|11|25,USA
-Prospero Alpini,1553|11|23,Italy
-Pope John Paul I,1912|10|17,Kingdom of
-Pope Pius II,1405|10|18,Republic of
-Phoebe Hearst,1842|12|03,USA
-Pablo Picasso,1881|10|25,Spain
-Pierre Trudeau,1919|10|18,Quebec
-Philip Glass,1937|01|31,United States
-Paul Johann Anselm Ritter von Feuerbach,1755|11|14,Holy Roman
-Paul Laurence Dunbar,1872|06|27,United States
-Peter Mark Roget,1779|01|18,England
-Pele,1940|10|23,Brazil
-Phil Ochs,1940|12|19,Texas
-Peggy Lee,1920|05|26,USA
-Robert Byrd,1917|11|20,United States
-Rene Descartes,1596|03|31,Kingdom of
-Roy Chapman Andrews,1884|01|26,Wisconsin
-Robert Noyce,1927|12|12,Iowa
-Robert Langlands,1936|10|06,lt
-Rene Magritte,1898|11|21,Belgium
-Robert M. Pirsig,1928|09|06,philosopher
-Robert Calvert,1945|03|09,South Africa
-Ray Bradbury,1920|08|22,U
-Roald Amundsen,1872|07|16,Norway
-Robert Bloch,1917|04|05,Illinois
-Robert Lowth,1710|11|27,Great Britain
-Robert Askin,1907|04|04,Australia
-Robert Nozick,1938|11|16,U
-Roy Jenkins,1920|11|11,Wales
-Raphael of Brooklyn,1860|11|20,Ottoman Syria
-Robert Penn Warren,1905|04|24,US
-Robert Jordan,1948|10|17,U
-Roman Jakobson,1896|10|11,Russian Empire
-Rudolph Pariser,1923|12|08,Berkeley
-Rumiko Takahashi,1957|10|10,Japan
-Ruslan Khasbulatov,1942|11|22,Soviet Union
-Suleiman the Magnificent,1494|11|06,Ottoman Empire
-Steve Biko,1946|12|18,Union of
-Soong May-ling,1898|03|05,Hainan
-Samuel Mudd,1833|12|20,United States
-Sam Loyd,1841|01|30,USA
-Samuel Taylor Coleridge,1772|10|21,England
-Stan Rogers,1949|11|29,Canada
-Titanic Thompson,1893|11|30,USA
-Theodor W. Adorno,1903|09|11,German Empire
-Thomas Gray,1716|12|26,England
-Ted Turner,1938|11|19,Georgia
-Tarja Halonen,1943|12|24,Finland
-Tipu Sultan,1750|11|20,Karnataka
-Timothy Leary,1920|10|22,Massachusetts
-Tokugawa Ieyasu,1543|01|31,Mikawa province
-James Randi,1928|08|07,skeptic
-Boulting brothers,1913|12|21,England
-Jacob Abbott,1803|11|14,United States
-Joseph Greenberg,1915|05|28,New York
-Jan Długosz,1415|12|01,Kingdom of
-John Keats,1795|10|31,England
-Judy Blume,1938|02|12,teacher
-John Pople,1925|10|31,England
-Jacob Grimm,1785|01|04,Holy Roman
-John Radcliffe (physician),1653|01|23,Kingdom of
-James L Jones,1943|12|19,U
-Jack Kirby,1917|08|28,United States
-Josip Broz Tito,1892|05|07,Austria
-Javier Saviola,1981|12|11,Argentina
-Karl Popper,1902|07|28,Austria
-Frost (rapper),1964|05|31,U
-Kool Keith,1963|10|19,Record producer
-Kim Stanley Robinson,1952|03|23,US
-Kenesaw Mountain Landis,1866|11|20,U
-Kim Philby,1912|01|01,British Raj
-Kurt Waldheim,1918|12|21,German Austria
-Kit Carson,1809|12|24,Kentucky
-Klement Gottwald,1896|11|23,Austria
-Fumimaro Konoe,1891|10|12,Empire of
-Kate Bush,1958|07|30,record producer
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+Alain Connes,1947/04/01,France
+
+a,a,a
+a,a,a
+a,a,a
+Andre Agassi,1970/04/29,Nevada
+
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+Arthur Schopenhauer,1788/02/22,ul
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+Alfred Hitchcock,1899/08/13,England
+
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+Alfred Nobel,1833/10/21,Sweden
+
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+a,a,a
+Ada Lovelace,1815/12/10,England
