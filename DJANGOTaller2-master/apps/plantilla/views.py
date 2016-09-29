@@ -8,7 +8,7 @@ reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
 
 #HACIENDO UN SUBPROCESO
-archivo_cluster=os.system ("scp cluster_bigdata:lasalida/nombre_fecha_lugar* /home/estudiante/GrafoconTaller2/DJANGOTaller2-master")
+archivo_cluster=os.system ("scp cluster_bigdata:lasalida/nombre_fecha_lugar_ultimo* /home/estudiante/GrafoconTaller2/DJANGOTaller2-master")
 print archivo_cluster
 #TERMINANDO EL SUBPROCESO
 
@@ -38,7 +38,8 @@ def mygraph(request):
     graph = {"nodes": [], "edges": []}
 
     file = open("data.txt")
-
+    #file = open("nombre_fecha_lugar_ultimo.txt")
+    
     a=request.GET['country']
     b=request.GET['name']
     f_inicio=request.GET['fecha_inicio']
@@ -48,21 +49,19 @@ def mygraph(request):
     for line in file:
         if  line.strip():
             line= line.replace("\n", "")
-            line1=line.replace(" ","")
-            line2=line1.replace("|","/")
+            #line1=line.replace(", ",",")
+            line2=line.replace("|","/")
             values= line2.split(",")
              #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE
              #FIN DEL FILTRO PARA BUSCAR POR NOMBRE
-            if not (values[2] or values[0]) :
-                toLabel="a";
-                FromLabel="a"; 
-                
-            else:
+            try :
                 toLabel= values[2]
                 fromLabel= values[0]
-            fecha=values[1]
-
-
+                fecha=values[1]
+            except :
+                 toLabel= "a"
+                 fromLabel= "a"
+                 fecha="a"              
 
             from_id=findNodeId(fromLabel, graph)
             if (fromLabel==b or toLabel==a and (f_inicio <= fecha <= f_fin)): #ESTE HACE EL FILTRO POR PAIS
@@ -84,5 +83,5 @@ def mygraph(request):
                 e= {"from": from_id, "to":to_id, "label": values[1]}
                 graph["edges"].append(e)
                 edge_id=edge_id+1
-        #return JsonResponse(graph)
+    #return JsonResponse(graph)
     return HttpResponse(json.dumps(graph,ensure_ascii=False).encode("utf8"),content_type="application/json")
