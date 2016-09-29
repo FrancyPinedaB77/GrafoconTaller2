@@ -63,7 +63,7 @@ def mygraph(request):
                  toLabel= "a"
                  fromLabel= "a"
                  fecha="a"              
-
+                 print "coloca las a si no cumplen"
             from_id=findNodeId(fromLabel, graph)
             if (fromLabel==b or (toLabel==a and (f_inicio <= fecha <= f_fin))): #ESTE HACE EL FILTRO POR PAIS
             #if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
