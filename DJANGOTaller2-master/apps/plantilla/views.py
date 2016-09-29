@@ -38,7 +38,6 @@ def mygraph(request):
     graph = {"nodes": [], "edges": []}
 
     #file = open("data.txt")
-    
     file = open("nombre_fecha_lugar_ultimo.txt")
     
     a=request.GET['country']
@@ -50,9 +49,9 @@ def mygraph(request):
     for line in file:
         if  line.strip():
             line= line.replace("\n", "")
-            #line1=line.replace(", ",",")
-            line2=line.replace("|","/")
-            values= line2.split(",")
+            line1=line.replace(", ",",")
+            #line2=line.replace("|","/")
+            values= line1.split(",")
              #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE
              #FIN DEL FILTRO PARA BUSCAR POR NOMBRE
             try :
