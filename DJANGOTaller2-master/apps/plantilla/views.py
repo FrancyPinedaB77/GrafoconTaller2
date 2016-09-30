@@ -37,7 +37,7 @@ def mygraph(request):
 
     graph = {"nodes": [], "edges": []}
 
-    file = open("nombrelugar.txt")
+    file = open("corto.txt")
     #file = open("nombre_fecha_lugar_ultimo.txt")
     #print "entra y elee el archivo"
     a=request.GET['country']
