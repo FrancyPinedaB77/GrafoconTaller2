@@ -35,7 +35,7 @@ a,a,a
 a,a,a
 a,a,a
 a,a,a
-Arthur Schopenhauer,1788/02/22,ul
+Arthur Schopenhauer,,ul
 a,a,a
 a,a,a
 a,a,a
@@ -57,7 +57,7 @@ a,a,a
 a,a,a
 a,a,a
 a,a,a
-Alfred Hitchcock,1899/08/13,England
+,1899/08/13,England
 
 a,a,a
 a,a,a
@@ -66,7 +66,7 @@ a,a,a
 a,a,a
 a,a,a
 a,a,a
-Alfred Nobel,1833/10/21,Sweden
+Alfred Nobel,1833/10/21,
 
 a,a,a
 a,a,a
