@@ -63,8 +63,7 @@ def mygraph(request):
                  fecha="a"              
                  
             from_id=findNodeId(fromLabel, graph)
-            if (fromLabel==b or (toLabel==a and (f_inicio <= fecha <= f_fin))): #ESTE HACE EL FILTRO POR PAIS
-            #if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
+            if (fromLabel==b or (toLabel==a and (f_inicio <= fecha <= f_fin))):
                 if from_id==-1:
                     nodes= graph["nodes"]
                     nodes.append({"id": node_id, "label": fromLabel})
