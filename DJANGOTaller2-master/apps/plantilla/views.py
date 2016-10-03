@@ -37,7 +37,7 @@ def mygraph(request):
 
     graph = {"nodes": [], "edges": []}
 
-    file = open("corto.txt")
+    file = open("nombre_fecha_lugar_ultimo.txt")
     #file = open("nombre_fecha_lugar_ultimo.txt")
     #print "entra y elee el archivo"
     a=request.GET['country']
@@ -50,20 +50,18 @@ def mygraph(request):
         if  line.strip():
             line= line.replace("\n", "")
             line1=line.replace(", ",",")
-            #line2=line.replace("|","/")
             values= line1.split(",")
-             #INCIO DEL FILTRO PARA BUSCAR POR NOMBRE
-             #FIN DEL FILTRO PARA BUSCAR POR NOMBRE
+
             try :
                 toLabel= values[2]
                 fromLabel= values[0]
                 fecha=values[1]
-                print "aqui entra a verificar los campos value 01y2"
+                
             except :
                  toLabel= "a"
                  fromLabel= "a"
                  fecha="a"              
-                 print "coloca las a si no cumplen"
+                 
             from_id=findNodeId(fromLabel, graph)
             if (fromLabel==b or (toLabel==a and (f_inicio <= fecha <= f_fin))): #ESTE HACE EL FILTRO POR PAIS
             #if fromLabel== "Shakira" : # ESTE HACE EL FILTRO POR NOMBRE
